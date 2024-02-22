@@ -1,0 +1,94 @@
+.customers {
+    margin-left: 8rem;
+    padding-bottom: 7rem;
+    background-color: #15141b;
+
+}
+
+.customers-paragraph{
+    font-size: 1.8rem;
+    color: #ddd;
+    width: 50%;
+    margin: 2rem auto 8rem auto;
+    text-align: center;
+}
+
+.customers-card-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.customer-card{
+    background-color: #eee;
+    width: 50rem;
+    display: flex;
+}
+
+.customer-image-wrapper{
+    margin-block: 1rem;
+}
+
+.customer-image{
+    width: 15rem;
+    display: block;
+    margin-left: -1.3rem;
+    margin-block: auto;
+}
+
+.customer-info{
+    padding-inline: 2rem;
+}
+
+.customer-fullname{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.customer-paragraph-1{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b85d1c;
+}
+
+.customer-paragraph-2{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+@media screen and (max-width: 1400px){
+    .customers-card-wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+
+
+@media screen and (max-width: 750px){
+        .customer-card{
+            flex-direction: column;
+            width: 20rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .customer-image-wrapper{
+            margin-block: 0;
+        }
+
+        .customer-image{
+            margin-left: 0;
+            width: 100%;
+        }
+        
+}
+
+@media screen and (max-width: 500px){
+    .customers-paragraph{
+        font-size: 1.4rem;
+        width: 80%;
+    }
+}
+

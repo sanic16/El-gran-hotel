@@ -4,7 +4,7 @@ import { FaCrown } from 'react-icons/fa'
 
 const Header = () => {
   return (
-    <header className='header'>
+    <header className='header' id='home'>
         <div className='brand'>
             <div>
                 <FaCrown />

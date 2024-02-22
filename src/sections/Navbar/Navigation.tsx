@@ -2,6 +2,7 @@
 import { FaSearch } from "react-icons/fa"
 import './navigation.css'
 import { nav_links } from "./data"
+import useMenuContext from "@/context/menu-context"
 
 const Navigation = (
     {
@@ -11,7 +12,7 @@ const Navigation = (
     
     }
 ) => {
-
+    const { hideMenu } = useMenuContext()
     const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault()
     }
@@ -42,8 +43,14 @@ const Navigation = (
             <ul className="navigation-list">
                 {
                     nav_links.map(nav_item => (
-                        <li className="navigation-item">
-                            <a href={nav_item.link} className="navigation-link">{nav_item.text}</a>
+                        <li className="navigation-item" key={nav_item.link}>
+                            <a 
+                                href={nav_item.link} 
+                                className="navigation-link"
+                                onClick={hideMenu}
+                            >
+                                    {nav_item.text}
+                            </a>
                         </li>
                     ))
                 }

@@ -4,9 +4,10 @@ import { FaFacebook } from 'react-icons/fa'
 import { social_links } from './data'
 import './navbar.css'
 import Navigation from './Navigation'
+import useMenuContext from '@/context/menu-context'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isMenuOpen, showMenu, hideMenu } = useMenuContext()
   const currentYear = new Date().getFullYear()
   
 
@@ -16,23 +17,25 @@ const Navbar = () => {
 
             <div 
                 className='menu-icon'
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                    isMenuOpen ? hideMenu() : showMenu()
+                }}
             >
                 <div 
-                    className={`line line-1 ${isOpen ? 'hamburger-line-1' : ''}  `}>
+                    className={`line line-1 ${isMenuOpen ? 'hamburger-line-1' : ''}  `}>
                 </div>
                 <div 
-                    className={`line line-2 ${isOpen ? 'hamburger-line-2' : ''}  `}>
+                    className={`line line-2 ${isMenuOpen ? 'hamburger-line-2' : ''}  `}>
                 </div>
                 <div 
-                    className={`line line-3 ${isOpen ? 'hamburger-line-3' : ''}  `}>
+                    className={`line line-3 ${isMenuOpen ? 'hamburger-line-3' : ''}  `}>
                 </div>        
             </div>
 
             <ul className='social-icons-list'>
                 {
                     social_links.map(social => (
-                        <li>
+                        <li key={social.link}>
                             <a 
                                 href={social.link}
                                 className='social-link'
@@ -50,7 +53,7 @@ const Navbar = () => {
         </div>
 
         <Navigation 
-            className={isOpen ? 'navigation-open' : ''}
+            className={isMenuOpen ? 'navigation-open' : ''}
         />   
 
     </div>

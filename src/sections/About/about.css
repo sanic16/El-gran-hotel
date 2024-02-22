@@ -1,0 +1,153 @@
+.about-us{
+    margin-left: 8rem;
+    display: flex;
+    background-color: #ddd;
+}
+
+.about-us-content{
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    box-sizing: border-box;
+} 
+
+.about-us-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.small-underline{
+    width: 9rem;
+    height: .1rem;
+    background-color: #b85d1c;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+.big-underline{
+    width: 20rem;
+    height: .1rem;
+    background-color: #b85d1c;
+}
+
+.sub-heading{
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: #b85d1c;
+}
+
+.about-us-paragraph{
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.about-us-images{
+    position: relative;
+    flex: 1 1;
+}
+
+.about-us-btn{
+    width: 15rem;
+    padding: .7rem .5rem;
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.about-us-btn svg{
+    transition: margin-left 400ms ease-in-out;
+}
+
+.about-us-btn:hover svg{
+    margin-left: .5rem;
+}
+
+.image{
+    width: 32rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
+    border-radius: .4rem;
+    border: .2rem solid #b85d1c;
+}
+
+.image-3{
+    transform: translate(-50%, -50%);
+}
+
+.image-1{
+    transform: translate(-20%, -90%);
+}
+
+.image-2{
+    transform: translate(-70%, -70%);
+}
+
+.image-4{
+    transform: translate(-30%, -30%);
+}
+
+@media screen and (max-width: 1200px){
+    .about-us{
+        flex-direction: column;
+        padding-bottom: 20rem;
+    }
+
+    .about-us-content{
+        margin-bottom: 13rem;
+    }
+
+    .image{
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .image{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .image{
+        width: 13rem;
+    }
+
+    .about-us{
+        padding-bottom: 15rem;
+    }
+
+    .about-us-heading{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .sub-heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-us-content{
+        padding: 5rem;
+    }
+    
+}

@@ -17,8 +17,8 @@ export const social_links = [
 export const nav_links = [
     {link: '#home', text: 'Inicio'},
     {link: '#about', text: 'Acerca de Nosotros'},
-    {link: '#rooms', text: 'Cuartos'},
+    {link: '#rooms', text: 'Dormitorios'},
     {link: '#events', text: 'Eventos'},
-    {link: '#customer', text: 'Clientes'},
+    {link: '#customers', text: 'Clientes'},
     {link: '#contact', text: 'Contáctanos'}
 ]
